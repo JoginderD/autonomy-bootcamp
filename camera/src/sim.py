@@ -1,25 +1,9 @@
-"""SimCamera: YOUR Part 2 assignment.
+import time
 
-A camera that makes up its own frames. Read ``src/fixed.py`` and its tests
-first, then make ``tests/test_sim_camera.py`` pass:
-
-    warg run camera test
-
-``SimCamera(width=64, height=48)`` hands back a ``(height, width, 3)``
-``uint8`` frame every time you ask, for as long as it's on, with ``index``
-counting up from 0. Same rules as every camera
-(``src/abstract_camera.py``), plus one:
-
-A frame's pixels depend only on its index. Frame 2 always looks the same,
-here or in any SimCamera built with the same size, and frames with different
-indexes look different. Fill values, gradients, and
-``numpy.random.default_rng(index)`` all work.
-"""
+import numpy as np
 
 from .abstract_camera import AbstractCamera
 from .frame import CameraFrame
-import time
-import numpy as np
 
 
 class SimCamera(AbstractCamera):
